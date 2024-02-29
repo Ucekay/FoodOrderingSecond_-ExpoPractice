@@ -1,14 +1,16 @@
-import { View } from "react-native";
+import { FlatList } from "react-native";
 
 import ProductListItem from "@/src/components/ProductListItem";
 import products from "@/assets/data/products";
 
-const product = products[0];
-
-export default function TabOneScreen() {
+export default function MenuScreen() {
   return (
-    <View className="flex-1">
-      <ProductListItem product={product} />
-    </View>
+    <FlatList
+      data={products}
+      renderItem={({ item }) => <ProductListItem product={item} />}
+      numColumns={2}
+      contentContainerClassName="gap-2 p-2"
+      columnWrapperClassName="gap-2"
+    />
   );
 }

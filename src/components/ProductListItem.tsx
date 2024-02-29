@@ -1,5 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { Text, Image, Pressable } from "react-native";
 import React from "react";
+import { Link } from "expo-router";
 
 import { Product } from "../types";
 
@@ -12,15 +13,17 @@ export const defaultPizzaImage =
 
 const ProductListItem = ({ product }: ProductListItemProps) => {
   return (
-    <View className="max-w-[50%] flex-1 rounded-3xl bg-white p-2">
-      <Image
-        source={{ uri: product.image || defaultPizzaImage }}
-        className="aspect-square w-full"
-        resizeMode="contain"
-      />
-      <Text className="my-2 text-lg font-semibold">{product.name}</Text>
-      <Text className="font-bold text-lightTint">{product.price}</Text>
-    </View>
+    <Link href={`/menu/${product.id}`} asChild>
+      <Pressable className="max-w-[50%] flex-1 rounded-3xl bg-white p-2">
+        <Image
+          source={{ uri: product.image || defaultPizzaImage }}
+          className="aspect-square w-full"
+          resizeMode="contain"
+        />
+        <Text className="my-2 text-lg font-semibold">{product.name}</Text>
+        <Text className="font-bold text-lightTint">{product.price}</Text>
+      </Pressable>
+    </Link>
   );
 };
 

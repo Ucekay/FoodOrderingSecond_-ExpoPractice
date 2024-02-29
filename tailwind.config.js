@@ -11,6 +11,9 @@ module.exports = {
       textColor: {
         lightTint: "#2f95dc",
       },
+      backgroundColor: {
+        lightTint: "#2f95dc",
+      },
     },
   },
   plugins: [],

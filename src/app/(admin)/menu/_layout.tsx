@@ -25,7 +25,7 @@ export default function MenuStack() {
       }}
     >
       <Stack.Screen
-        name="[id]"
+        name="index"
         options={{
           title: "Menu",
           headerRight: () => (

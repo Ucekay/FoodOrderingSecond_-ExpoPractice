@@ -9,7 +9,7 @@ const SignUpScreen = () => {
 
   return (
     <View className="flex-1 justify-center p-2">
-      <Stack.Screen options={{ title: "Sign in" }} />
+      <Stack.Screen options={{ title: "Sign up" }} />
       <Text className="text-base text-gray-500">Email</Text>
       <TextInput
         value={email}

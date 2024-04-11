@@ -13,6 +13,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@candlefinance/blur-view": "git+https://github.com/Ucekay/blur-view.git",
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/material-top-tabs": "^6.6.10",
     "@react-navigation/native": "^6.0.2",
